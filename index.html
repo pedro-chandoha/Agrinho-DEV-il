@@ -4,8 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        background-color: #f0f0f0;
+      }
+      
+      .logo {
+        margin-right: 20px;
+      }
+      
+      .logo img {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .image-container {
+        flex: 1;
+        text-align: center;
+      }
+      
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      
+      .menu-hamburguer {
+        display: flex;
+        align-items: center;
+      }
+      
+      .menu-hamburguer input[type="checkbox"] {
+        display: none;
+      }
+      
+      .menu-hamburguer label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      .menu-hamburguer label span {
+        background-color: #333;
+        height: 2px;
+        width: 20px;
+        margin-bottom: 4px;
+        transition: background-color 0.2s ease;
+      }
+      
+      .menu-hamburguer label span:last-child {
+        margin-bottom: 0;
+      }
+      
+      .menu-hamburguer input[type="checkbox"]:checked ~ label span {
+        background-color: #fff;
+      }
+      
+      .menu-hamburguer nav {
+        display: none;
+      }
+      
+      .menu-hamburguer input[type="checkbox"]:checked ~ nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #f0f0f0;
+        padding: 1em;
+        border: 1px solid #ddd;
+        width: 200px;
+      }
+      
+      .menu-hamburguer nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu-hamburguer nav li {
+        margin-bottom: 10px;
+      }
+      
+      .menu-hamburguer nav a {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      .menu-hamburguer nav a:hover {
+        color: #666;
+      }
+      
+      .menu-hamburguer nav ul ul {
+        display: none;
+      }
+      
+      .menu-hamburguer nav li:hover > ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #f0f0f0;
+        padding: 1em;
+        border: 1px solid #ddd;
+        width: 200px;
+      }
+      
+      .menu-hamburguer nav li:hover > ul li {
+        margin-bottom: 10px;
+      }
+      
+      .menu-hamburguer nav li:hover > ul a {
+        color: #333;
+      }
+      
+      .menu-hamburguer nav li:hover > ul a:hover {
+        color: #666;
+      }</style>
 </head>
+
 <body>
-    
+<header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <div class="image-container">
+      <img src="image.png" alt="Imagem">
+    </div>
+    <div class="menu-hamburguer">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+          <li>
+            <a href="#">Produtos</a>
+            <ul>
+              <li><a href="#">Produto 1</a></li>
+              <li><a href="#">Produto 2</a></li>
+              <li><a href="#">Produto 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Serviços</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </body>
 </html>
