@@ -3,6 +3,7 @@
     --letra-header: white;
     --hover: #424937;
     --menu: rgb(0, 0, 0);
+    --texto-qs: #424937;
 }
 header {
     display: flex;
@@ -54,7 +55,24 @@ header {
     font-size: 24px;
     color: var(--menu);
 }
-
+.imagem-e-texto{
+    h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: small;
+        color:black;
+    }
+    background-image: url(imagem-fundo.jpeg);
+    background-size: cover;
+}
+.quem-somos{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+.texto_qs{
+    height: 50%;
+    width: 70%;
+    color: var(--texto-qs);
+}
 @media (max-width: 768px) {
     .menu {
         display: none;
